@@ -1,0 +1,338 @@
+<!-- This file needs to be edited by the lab developer to suit the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is specified in default.html. Do not include class="default" to the elements that you want to edit -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <script type="text/javascript" src="a7.js"></script>
+    </head>
+
+    <body>
+        <div id="experiment">
+            <!-- The Experiment Document Container-->
+            <!-- The lab Header contains the logo and the name of the lab, usually displayed on the top of the page-->
+
+            <header class="default" id="experiment-header">
+                <div class="logo" id="experiment-header-logo">
+                    <!-- Enclose the logo image of your lab or write it in text-->
+                    <img src="../images/logo.jpg"></div>
+
+                <div class="heading" id="experiment-header-heading">
+                    <!-- Write the name of your lab and link it to the home 
+          page of your lab (h1 tag is preferred while writing your 
+          lab name)-->
+                    <a href="../index.html">Dsp lab</a>
+                </div><!-- Add any additional element you want to add to the lab 
+        header, For example : Help (Enclosing them with suitable 
+        div is recommended)-->
+            </header><!-- The lab article is the main content area where all the experiment content sits-->
+
+            <article id="experiment-article">
+                <!-- The lab article has an header, optional navigational 
+        menu, number of sections, an optional sidebar and a closing 
+        footer-->
+
+                <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+                <header class="heading" id="experiment-article-heading">
+                    Study of Transform domain properties and its use
+                </header><!-- Navigation menu is useful to organize the view of multiple sections inside the article-->
+
+                <nav class="default" id="experiment-article-navigation">
+                    <ul id="experiment-article-navigation-menu">
+                        <!-- The menu can be dynamically generated to contain 
+              the headings of your sections or instead write the 
+              menu items of your choice individually enclosedu in 
+              &lt;li&gt; tag as shown below-->
+                    </ul>
+                </nav><!-- All the sections of your lab or experiment can be 
+          enclosed together with a div element as shown below-->
+
+                <div id="experiment-article-sections">
+                    <!------------------------------- First section of the article---------------------------------->
+
+                    <section id="experiment-article-section-1">
+                        <div class="icon" id="experiment-article-section-1-icon">
+                            <!-- Enclose the icon image of your lab -->
+                            <img src="../images/introduction.jpg"></div>
+                        <!-- The heading for the section can be enclosed in a div tag. -->
+
+                        <div class="heading" id="experiment-article-section-1-heading">
+                            Introduction
+                        </div><!-- Write the section content inside a paragraph element, You can also include images with &lt;img&gt; tag -->
+
+                        <div class="content" id="experiment-article-section-1-content">                            
+                            <p>This experiment enables a student to learn
+                <ul>
+                    <li>Different properties of transfer domain.</li>
+                    <li>Linearity and circular shift properties of DFT.</li>
+                    
+                </ul>
+            
+                
+                </p>                            
+                        </div>
+                    </section>
+                    <!-------------------------- Second section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-2">
+                        <div class="icon" id="experiment-article-section-2-icon">
+                            <!-- Enclose the icon image of your lab. -->
+                            <img src="../images/theory.jpg"></div>
+                        <!-- The heading for the section can be enclosed in a div tag. -->
+
+                        <div class="heading" id="experiment-article-section-2-heading">
+                            Theory
+                        </div><!-- Write the section content inside a paragraph element, we can also include images with &lt;img&gt; tag -->
+
+                        <div class="content" id="experiment-article-section-2-content">                            
+                            <p>Properties of Discrete Fourier Transform</p>
+                            <p  class="heading-content">
+                                In this experiment, we consider some of the properties of DFT for finite-duration sequence and rest will be tabulated
+                                in table. Mainly, we are going to explain linearity and circular shift properties of DFT.</p>
+                            <p>Linearity Property</p>                            
+                            <p>If <b>x<sub>1</sub>(n)</b> and <b>x<sub>2</sub>(n)</b> have N-point DFTs <b>X<sub>1</sub>(k)</b>and <b>X<sub>2</sub>(k)</b>,
+                                            respectively,</p>
+                             <p><p style="text-align:center">`ax_1(n)+bx_2(n) stackrel(DFT)hArr  ax_1(k)+bx_2(k)`</p>
+                            <p  class="heading-content">In using this property, it is important to ensure that the DFTs are the same length. If 
+                                <b>x<sub>1</sub>(n)</b>and <b>x<sub>2</sub>(n)</b> have different
+                                lengths, the shorter sequence must be padded with zeros in order to make it the same length as the longer sequence. For
+                                example, if <b>x<sub>1</sub>(n)</b> is of length <b>N1</b> and <b>x<sub>2</sub>(n)</b> is of length <b>N2</b> with <b>N2</b> > <b>N1</b>.
+                                <b>x<sub>1</sub>(n)</b> may be considered to be a sequence of 
+                                length <b>N2</b> with the last <b>N2-N1</b> values equal to zero, and DFTs of length <b>N2</b> may be taken for 
+                                both sequences.</p>
+                            <p  class="heading-content">Circular time and frequency shift</p>
+                            <p  class="heading-content">If <b>X(k)</b> is the N-point DFT of x(n), then if we apply N-point DFT on time shifted 
+                                (circular) sequence i.e. <b>x(n-m)</b>, 
+                                where m is a positive integer, then the according to circular time shift property:</p>
+                            <p><p style="text-align:center">`DFT[X((n-m))N]=X(k)e^-((j2pikm)/N)`</p>
+                            <p>Similarly,</p>
+                            <p><p style="text-align:center">`DFT[X((n))^((ei2pimn)/N)]=X((K-M))N`</p>
+                            <p  class="heading-content">It means, if we multiply a complex exponential sequence <b>e<sup>(i2&Pi;mn/N)</sup></b> with the 
+                                sequence <b>x(n)</b> in
+                                time domain is equivalent
+                                to the circular shift of the DFT by m units in frequency domain. This property is called circular frequency shift property
+                                of DFT</p>
+                            <p>Periodicity property</p>
+                            <p>If <b>x(n)</b> and <b>X(k)</b> are an N-point DFT pair, then</p>
+                            <p><p style="text-align:center"><b>`x(n+N)=x(N)` for all n</b> </p>
+                            <p><p style="text-align:center"><b>`x(K+N)=X(K)`for all k</b></p> 
+                            <p>These periodicities in x(n) and X(k) follow immediatly for the DFT and IDFT, respectively</p>
+                            <p>We previously illustrated the periodicity property in the sequence <b>x(n)</b> for a given DFT. However, we had not previously
+                                viewed the DFT <b>X(k)</b> as a periodic sequence. In some applications it is advantageous to do this.</p>
+                            <p>Time reversal of a sequence</p>
+                            <p>If <b>x(n)</b> and <b>X(k)</b> are an N-point DFT pair, then</p><p style="text-align:center">`DFT[x((-n))N]=DFT[X(N-n)]=x((-k))N=X(N-K)`</p>
+                            <p>Hence reversing the N-point sequence in time is equivalent to reversing the DFT values</p>
+                            <p>Circular convolution</p>
+                            <p  class="heading-content">The multiplication of DFTs of two sequences is equivalent to the circular convolution of the two sequences in the time 
+                                domain</p>
+                            <p>If</p>
+                            <p style="text-align:center">`DFT[X_1(N)]=X_1(K)`</P>
+                            <p style="text-align:center">`DFT[X_2(N)=X_2(K)]`</P>
+                            <p style="text-align:center">`x_1(n)(N)x_2(n)=x_1(k)x_2(k)`</P>
+                            <p><b>(N)</b> is the symbol for circular convolution of two sequences i.e. <b>x<sub>1</sub>(n)</b> and <b>x<sub>2</sub>(n)</b></p> 
+                            <p>Parseval's Theorem</p>
+                            <p>For complex-valued sequences <b>x(n)</b> and <b>y(n)</b>, in general, if</p>
+                            <p style="text-align:center">`DFT[x(n)]=X(k)`</p>
+                            <p style="text-align:center">`DFT[y(n)]=x(k)`</p>
+                            <p>Then</p>
+                            <p style="text-align:center">`sum_(n=0)^(N-1)x(n)y*(n)=1/N sum_(k=0)^(N-1)x(k)Y*(k)`</p>
+                            <p>This expression is the general form of Parseval's theorem. In the special where <b>y(n)</b> = <b>x(n)</b>, reduced to</p>
+                            <p style="text-align:center">`sum_(n=0)^(N-1)|x(n)|^2=1/N sum_(k=0)^(N-1)|x(k)|^2`</p>
+                            <p>which expresses the energy in the finite-duration sequence <b>x(n)</b> in term of the frequency components <b>{X(k)}</b>.</p>
+                        </div>
+                    </section>
+                    <!-------------------------- Third section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-3">
+                        <div class="icon" id="experiment-article-section-3-icon">
+                            <!-- Enclose the icon image of your lab. -->
+                            <img src="../images/objective.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-3-heading">
+                            procedure
+                        </div>
+
+                        <div ALIGN="justify" class="content" id="experiment-article-section-3-content">  
+                            <p>Please follow these steps to do the experiment</p>
+                            <p  class="heading-content">1.Click on the simulator tab <b><u><font size="5">SIMULATOR</font></u></b>It will open the workspace.By default workspace 
+                                of the Part 1 of the experiment is available.</p>
+                            <p>2.By using you can switch between  <img style="width:145px;height:35px;" src="../images/exp7/but.png" alt="" /> 
+                            of this experiment.</p>
+                            <p  class="heading-content">3.See the movie in experiment page by pressing <b>help</b> button to understand how the different steps, as mentioned next
+                                , are to be executed.</p>
+                            <p>Part 1: Linearity Property</p>
+                            <p class="heading-content">4.The linearity property of DFT is defined as
+                            <p style="text-align:center">`a*x_1(n)+b*x_2(n)=DFT[a*x_1(n)+b*x_2(n)]`</p> . 
+                            We have divided entire experiment workspace into two parts, one for <p style="text-align:center">`a*x_1(n)+b*x_2`</p> and 
+                                another for <p style="text-align:center">`DFT[a*x_1(n)+b*x_2]`</p> of the above expression.</p>
+                            <p class="heading-content">5.We have provided four controls for each input signals: signal selector, a slider to set the input signal no. of samples,
+                                another slider to set the DFT no. of points and numeric stepper to set gain (a or b).</p>
+                            <center><img style="width:619px;height:96px;" src="../images/exp7/fig-1.png" alt="" /><br/>
+                            fig-1 </center>
+                            <p class="heading-content">6.Graph 1, 2, 3 and 4 are the graphs for expression <b>a*x<sub>1</sub></b>(n). 
+                                Similarly Graph 5, 6, 7 and 8 are the graphs for expression DFT<b>[a*x_1(n)+b*x_2(n)]</b>
+                                You have to observe the output behavior while
+                                change in parameter values for both expressions.It means if you feed similar parameter values for both parts of the experiment, are the magnitude and phase spectrum plots are 
+                            similar or not.</p>
+                            <p class="heading-content">7.For example, set rectangular signal and 8 sample length for both <b>x<sub>1</sub>(n)</b> and <b>x<sub>2</sub>(n)</b> 
+                                and set DFT points to 8. If <b>a</b>=1 and <b>a</b>=2 for the 
+                                first expression. Similarly set the same values for the other expression. Now observe the output magnitude and phase spectrum in 
+                                Graph 4 and 5, compare with the graph plots in Graph 7 and 8. Note down the observations and make discussion about the results.</p>
+                            <p class="heading-content"> 8. For example, set rectangular signal and 8 sample length for both <b>x<sub>1</sub>(n)</b> and <b>x<sub>2</sub>(n)</b> and 
+                                set DFT points to 8. If <b>a</b>=1 and <b>a</b>=2 
+                                for the first expression. Similarly set the same values for the other expression. Now observe the output magnitude and
+                                phase spectrum in Graph 4 and 5, compare with the graph plots in Graph 7 and 8. Note down the observations and make 
+                                discussion about the results.</p>
+                            <p class="heading-content">9.Similarly, set <b>x<sub>1</sub>(n)</b> and <b>x<sub>2</sub>(n)</b> to ramp signal and no of 
+                                samples to 16. Set 16 DFT points and <b>a</b>=2 and <b>b</b>=3. Observe the 
+                                changes in magnitude and phase spectrum plots and discuss about the changes in report generation. Again note down the 
+                                sample values for Table no. 2 for report generation</p>
+                             <center><img style="width:610px;height:415px;" src="../images/exp7/fig-2.png" alt="" /><br/>
+                                 fig-2 </center>
+                            <p>Part 2: Circular time and frequency shift</p>
+                            <p>10.You can switch on to part 2 by clicking <img style="width:66px;height:35px;" src="../images/exp7/but1.png" alt="" /></p>
+                            <p  class="heading-content">11.Here we are trying to explain the circular shift property of DFT. Both Time Shift and frequency shift property covered
+                                in this section</p>
+                            <p> <p style="text-align:center">`DFT[X((n-m))N]=X(k)e^-((j2nkm)/N)`...Time shift</p>
+                            <p>.Similarly,</p>
+                            <p> <p style="text-align:center">`DFT[X(N)e^((ei2nmn)/N)]=X((k-m))N`...Frequency shift</p>
+                            <p class="heading-content">12.Five controls are given to visualize the shifting property of DFT. Signal selector, No. of samples in input signal, 
+                                Selection for Time or frequency shift, no. of samples shift in both time and frequency domain and no. of DFT points</p>
+                            <center><img style="width:336px;height:165px;" src="../images/exp7/fig-3.png" alt="" /><br/>
+                                 fig-3 </center>
+                            <p class="heading-content">13.Graph 1 showing input signal and Graph 2, 3 and Graph 4, 5 showing the magnitude and phase spectrum of 
+                                the signal for 
+                                LHS and RHS of the both time and frequency shift expressions. </p>
+                            <p class="heading-content">14.Now set the ramp signal and 8 no. of samples for input signal. Choose time shift and make a 6 points 
+                                shift and 8 point
+                                DFT. Observe the change in graph plots for both magnitude and phase spectrum of the signal. Make discussion on it and 
+                                prepare a table to note down 10 to 15 samples value for all the graphs in the experiment workspace. It will give you 
+                                table 2.</p>
+                            <p class="heading-content">15.Similarly make 16 no. of samples for input signal. Now choose frequency shift and make 16 point
+                                DFT. Now observe the 
+                                signal output in graph 2,3,4 and 5 note down the sample values and it will give you table 2 for report generation</p>
+                            <center><img style="width:617px;height:445px;" src="../images/exp7/fig-4.png" alt="" /><br/>
+                                  fig-4 </center>
+                            <p class="heading-content">16.For every set of readings take a screenshot of the simulation stage, using the button provided 
+                                on the simulation 
+                                stage at right upper most corner  
+                            <img style="width:90px;height:23px;" src="../images/exp7/fig-5.png" alt="" />
+                            and upload each image with the table data in report generation</p>
+                            <p>17.Complete the Observation and discuss the results in report generation.</p>
+                            <p>18.Then click Yes I have finished my Experiment button to submit your report.</p>
+                            
+                        </div>
+                        
+                    </section>
+                    <!-------------------------- Fourth section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-4">
+                        <div class="icon" id="experiment-article-section-4-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/simulation.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-4-heading">
+                            simulator
+                        </div>
+
+                        <div class="content" id="experiment-article-section-4-content">                            
+                            <div align="left">
+                        
+                            	
+                                
+                        </div>
+                        
+                    	<div align="center" id="part1Div">
+                        
+                            <div align="left" style="padding-left:40px;">
+                            
+                           <img src="../images/img/help.jpg" align="right" style="cursor:pointer;width:30px;height:30px" title="Help"onclick="window.open('help1.html','helpWindow','width=760,height=700,screenX=300,screenY=120')" />         	
+                                    
+                            </div>
+                            
+                            <div align="center">
+                            
+                              <object width="800" height="850">
+                                  <param name="movie" value="expta.swf">
+                                  <embed src="expta.swf" width="800" height="850">
+                                  </embed>
+                              </object>
+                              
+                            </div>  
+                        
+                        </div>
+                        
+                    	<div align="center" id="part2Div" style="display:none;">
+                        
+                            <div align="left" style="padding-left:40px;">
+                           
+                                    	<img src="../images/img/help.jpg" align="right" style="cursor:pointer;width:50px;height:50px" title="Help"onclick="window.open('help1.html','helpWindow','width=760,height=700,screenX=300,screenY=120')" />
+                                   
+                        	</div>
+                            
+                            <div align="center">
+                            
+                              <object width="800" height="850">
+                                  <param name="movie" value="exptb.swf">
+                                  <embed src="exptb.swf" width="800" height="850">
+                                  </embed>
+                              </object>
+                              
+                            </div>  
+                        
+                        </div>
+                                                    
+                        </div>
+                    </section>
+                    <!-------------------------- Fifth section of the article---------------------------------------->
+
+                   
+
+                    <!-------------------------- Sixth section of the article---------------------------------------->
+
+                   
+                    <!-------------------------- Seventh section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-7">
+                        <div class="icon" id="experiment-article-section-7-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/quizzes.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-7-heading">
+                            Quizzes
+                        </div>
+
+                        <div class="content" id="experiment-article-section-7-content">                            
+                            <p>Quizzes content.....</p>                           
+                        </div>
+                    </section>
+                    <!-------------------------- Eight section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-8">
+                        <div class="icon" id="experiment-article-section-8-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/reference.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-8-heading">
+                            Reference
+                        </div>
+
+                        <div class="content" id="experiment-article-section-8-content">                            
+                            <p style="text-align:left; font-size:18px; font-weight:bold; padding-bottom: 10px;">Books:</p>                          
+                            <ul style="text-align:left; padding-bottom: 10px;"><li>Discrete-Time Signal Processing, A. V. Oppenheim and R. W. Schafer, Englewood Cliffs, NJ: Prentice Hall, 1989</li>
+                            <li>C. E. Shannon, "Communication in the presence of noise," Proc. Institute of Radio Engineers, vol. 37, no. 1, pp. 10-21, Jan 1949.</li>
+                            <li>H. Nyquist, "Certain topics in telegraph transmission theory," Trans. AIEE, vol. 47, pp. 617-644, Apr 1928.</li></ul>
+
+<p style="text-align:left; font-size:18px; font-weight:bold; padding-bottom: 10px;">Video Lectures:</p>
+<ul style="text-align:left; padding-bottom: 10px;">
+                                <li><a href="http://nptel.ac.in/courses/117102060/11" target="_blank">DFT (Contd.) Introduction to Z Transform</a></li>
+                            </ul>
+                        </div>
+                    </section>                   
+
+                </div>
+            </article>
+        </div>
+    </body>
+</html>
